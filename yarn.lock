@@ -1279,6 +1279,11 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
+"@mono.co/connect.js@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@mono.co/connect.js/-/connect.js-0.0.8.tgz#345803304527f7e4da22a2af84f475484e33c075"
+  integrity sha512-Fd2rOJvLAmPez8wATO6QAGB/2QacwUcJN5asNRrxSmp8+M8xZ5T6AJL71G4OQl8oNDBZyNCyQwA4ucXc+B4GfQ==
+
 "@nodelib/fs.scandir@2.1.3":
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.3.tgz#3a582bdb53804c6ba6d146579c46e52130cf4a3b"

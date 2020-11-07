@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import MonoConnect from '@mono.co/connect.js';
 
-function App() {
+export default function App() {
+  const monoConnect = React.useMemo(() => {
+    const monoInstance = new MonoConnect("test_pk_C2ozPjWOCkytgJKwM2M9", {
+      onClose: () => console.log('Widget closed'),
+      onLoad: () => console.log('Widget loaded successfully'),
+      onSuccess: ({ code }) => console.log(`Linked successfully: ${code}`)
+    })
+
+    monoInstance.setup()
+    
+    return monoInstance;
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <button onClick={() => monoConnect.open()}>
+        Authenticate with Mono
+      </button>
     </div>
-  );
+  )
 }
-
-export default App;
